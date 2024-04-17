@@ -43,14 +43,30 @@ const sortNumbers = (arr) => {
   return newArr.sort((a, b) => a - b);
 };
 
-const sortNumbersBetter = () => {
+const sortNumbersBetter = (arr, bool) => {
+  let newArr = [...arr];
+  return bool === true ? newArr.sort((a, b) => b - a) : newArr.sort((a, b) => a - b)
 };
 
-const sortUsersByOrder = () => {
+const sortUsersByOrder = (arr) => {
+  let arrCopy = [...arr];
+  arrCopy.sort((a, b) => a.order - b.order)
+  return arrCopy
 };
 
-const sortUsersByName = () => {
-};
+const sortUsersByName = (arr) => {
+  let arrCopy = [...arr]
+  arrCopy.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1
+    } else if (a.name > b.name) {
+      return 1
+    } else {
+      return 0
+    };
+  });
+  return arrCopy;
+}
 
 module.exports = {
   myForEach,
