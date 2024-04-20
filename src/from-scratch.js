@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job getting all test cases to pass! */
 const myForEach = (myNames, callback) => {
   for (let i = 0; i < myNames.length; i++) {
     callback(myNames[i]);
